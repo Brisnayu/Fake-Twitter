@@ -3,5 +3,8 @@
 >
    <h2>YO SOY TU PADRE!</h2>
 
-   <app-son></app-son>
+   <app-son
+    [message]="message"
+    (messageSent)="handleMessage($event)"
+   ></app-son>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-son',
@@ -9,4 +9,9 @@ import { Component, Input } from '@angular/core';
 })
 export class SonComponent {
   @Input() public message: string = '';
+  @Output() public messageSent = new EventEmitter<string>();
+
+  public sendMessage() {
+    this.messageSent.emit('Hola desde el componente hijo!')
+  }
 }

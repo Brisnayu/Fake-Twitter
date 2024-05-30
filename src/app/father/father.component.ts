@@ -9,5 +9,9 @@ import { SonComponent } from './son/son.component';
   styleUrl: './father.component.scss'
 })
 export class FatherComponent {
+  public message: string = 'Hola desde el componente padre';
 
+  public handleMessage(message: string) {
+    console.log(message);
+  }
 }
